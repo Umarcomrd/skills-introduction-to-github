@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "poppins", sans-serif;
+        }
+        .btn{
+            width: 100%;
+            height: 120vh;
+            background-color: black;
+        }
+        
+        .wrapper{
+            width: 100%;
+            height: 60px;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        .wrapper h1{
+            color: rgb(233, 215, 158);
+            margin: 15px;
+
+            margin-left: 30px;
+            font-size: 35px;
+        }
+        .wrapper ion-icon{
+            color: red;
+            margin-left: 5px;
+            font-size: 40px;
+        }
+        .wrapper a{
+            color:  rgb(233, 215, 158);
+            text-decoration: none;
+            font-weight: 600;
+
+            font-size: 19px;
+            margin: 9px;
+            position: relative;
+        }
+        .wrapper a::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 3px;
+            border-radius: 5px;
+            background-color: red;
+            transform-origin: right;
+        transform: scaleX(0);
+transition: .5s;
+
+        }
+        .wrapper a:hover::after{ 
+            transform: scaleX(1);
+        }
+        .wrapper #botton{
+            padding: 14px;
+            width: 110px;
+            border-radius: 7px;
+            border: 2px solid  rgb(233, 215, 158);
+            background: transparent;
+            color:  rgb(233, 215, 158);
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 10px;
+            transition: .6s;
+
+        }
+        .wrapper #botton:hover{
+            background-color:  rgb(233, 215, 158);
+            color: black;
+        }
+        .hole{
+            width: 40%;
+            height: 100%;
+            background-color: red;
+            position: absolute;
+            top: 0;
+        }
+        .hole{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+        }
+        .hole h1{
+            font-size: 45px;
+            color: wheat;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 80px;
+            font-weight: 600;
+        }
+        .hole span{
+            color: red;
+        }
+       img{
+        width: 640px;
+        height: 530px;
+        position: absolute;
+        top: 53px;
+        right: 167px;
+        
+       }
+       .about{
+        background-color: black;
+        height: 120vh;
+        width: 100%;
+       }
+       .about .container{
+        width: 400px;
+        height: 500px;
+        background: url(90.jpg)no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        margin-left: 160px;
+       }
+       .about .man{
+        width: 670px;
+        height: 440px;
+        margin-top: 90px;
+        margin-left: 20px;
+        
+        position: absolute;
+        top: 680px;
+        right: 90px;
+        color: white;
+       }
+       .man h1{
+        font-size: 40px;
+        font-weight: 600;
+        font-family: sans-serif;
+       }
+       .man p{
+        font-family: sans-serif;
+        font-size: 13px;
+        color:  rgb(160, 159, 159);
+       }
+       .man ul{
+        list-style: none;
+        display: flex;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        
+    
+       }
+       .man ul a{
+        text-decoration: none;
+        color: white;
+        position: relative;
+        font-weight: 600;
+        color:  rgb(160, 159, 159);
+       }
+       .man ul a::after{
+        content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 2px;
+            border-radius: 5px;
+            background-color:  red;
+            transform: translateY(10px);
+            opacity: 0;
+transition: .4s;
+       }
+       .man ul a:hover::after{
+        transform: translateY(0);
+        opacity: 1;
+       }
+       #boy{
+        font-size: 12px;
+        color: red;
+        padding: 3px;
+        font-weight: 600;
+       }
+       .service{
+        width: 100%;
+        height: 90vh;
+        background-color: black;
+        
+       }
+       #now{
+        color: white;
+        font-size: 40px;
+        margin-top: 140px;
+        margin-left: 200px;
+       }
+       .service .boxing{
+        width: 300px;
+        height: 250px;
+        background-color: red;
+        color: white;
+        margin-left: 400px;
+       }
+       .service .war{
+        width: 300px;
+        height: 250px;
+        background-color: red;
+        color: white;
+        margin-left: 600px;
+       }
+       .service .raw{
+        width: 300px;
+        height: 250px;
+        background-color: red;
+        color: white;
+        margin-left: 800px;
+        display: flex;
+        top: 0;
+       }
+       .maintain{
+        
+        width: 70%;
+        height: 400px;
+        margin-left: 170px;
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+       
+
+       }
+       .boy{
+        width: 280px;
+        height: 240px;
+        background-color:  rgb(24, 24, 24);
+      color: white;  
+      margin: 10px;
+      padding-right: 12px;
+      padding-top: 15px;
+      border-radius: 6px;
+      transition: background 0.5s, transform 0.5s;
+    text-align: center;
+       }
+       .boy h1{
+        font-size: 25px;
+        
+        margin-left: 10px;
+        
+       }
+       .boy .icons{
+        font-size: 55px;
+        font-weight: 600;
+       }
+       .boy p{
+        margin-left: 10px;
+        font-size: 13px;
+          margin-top: 12px;
+       }
+       .girl h1{
+        font-size: 25px;
+        
+        margin-left: 10px;
+        
+       }
+       .girl .icons{
+        font-size: 55px;
+        font-weight: 600;
+       }
+       .girl p{
+        margin-left: 10px;
+        font-size: 13px;
+        margin-top: 12px;
+       }
+       .girl{
+        width: 280px;
+        height: 240px;
+        background-color:  rgb(24, 24, 24);
+        color: white;  
+        margin: 10px;
+        padding-right: 12px;  
+        padding-top: 15px;
+        border-radius: 6px;
+        transition: background 0.5s, transform 0.5s;
+        text-align: center;
+        
+       }
+       .boy:hover{
+        background: #ff004f;
+        transform: translateY(-10px);
+       }
+       .girl:hover{
+        background: #ff004f;
+        transform: translateY(-10px);
+       }
+       .my-work{
+        background-color: black;
+        height: 180vh;
+        width: 100%;
+
+       }
+       #nwo{
+        color: white;
+        font-size: 40px;
+        margin-left: 140px;
+       }
+       .yahoo{
+        width: 75%;
+        height: 460px;
+    
+        margin-left: 110px;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        
+       }
+       #max{
+        color: white;
+        position: absolute;
+        top: 210px;
+        left: 82px;
+        font-size: 18px;
+       }
+       .firstly{
+        width: 300px;
+        height: 90%;
+        background: url(300.jpg)no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 12px;
+        padding: 0 25px;
+        text-align: center;
+        border-radius: 7px;
+        transition: transform 0.5s;
+        
+        
+       }
+       .firstly:hover{
+        background: linear-gradient(rgba(0,0,0,0.6), #ff004f), url(23.jpg)no-repeat;
+        
+        background-size: cover;
+
+        transform: scale(1.1);
+       }
+       .firstly h2{
+             color: white;
+             font-size: 15px;
+             font-weight: 600;
+             margin-top: 140px;
+       }
+       .firstly p{
+        color: white;
+        font-size: 12px;
+       }
+       .firstly ion-icon{
+        color: white;
+        font-size: 60px;
+        font-weight: 600;
+       }
+       .second{
+        width: 300px;
+        height: 90%;
+        background: url(26.jpg)no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 12px;
+        padding: 0 25px;
+        text-align: center;
+        border-radius: 7px;
+        transition: transform 0.5s;
+       }
+       .second h2{
+        color: white;
+             font-size: 15px;
+             font-weight: 600;
+             margin-top: 140px;
+       }
+       .second p{
+        color: white;
+        font-size: 12px;
+       }
+       .second ion-icon{
+        color: white;
+        font-size: 60px;
+        font-weight: 600;
+       }
+       .third{
+        width: 300px;
+        height: 90%;
+        background: url(200\ \(2\).jpg)no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 12px;
+        padding: 0 25px;
+        text-align: center;
+        border-radius: 7px;
+        transition: transform 0.5s;
+       }
+       .third:hover{
+        background: linear-gradient(rgba(0,0,0,0.6), #ff004f), url(25.jpg)no-repeat;
+        
+        background-size: cover;
+        background-position: center;
+        transform: scale(1.1);
+       }
+        .second:hover{
+        background: linear-gradient(rgba(0,0,0,0.6), #ff004f), url(24.jpg)no-repeat;
+        
+        background-size: cover;
+        background-position: center;
+        transform: scale(1.1);
+       }
+       .third h2{
+        color: white;
+             font-size: 15px;
+             font-weight: 600;
+             margin-top: 140px;
+       }
+       .third p{
+        color: white;
+        font-size: 12px;
+       }
+        .third ion-icon{
+        color: white;
+        font-size: 60px;
+        font-weight: 600;
+       }   
+       #btx{
+        margin-left: 560px;
+        margin-top: 20px;
+        padding: 10px 25px;
+        width: fit-content;
+        font-weight: 600;
+        background: transparent;
+        color: white;
+        font-size: 12px;
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid #ff004f;
+        transition: transform .5s;
+       
+       } 
+       #btx:hover{
+        background-color: #ff004f;
+        color: white;
+        transform: scale(1.1);
+       }
+       .contact-box{
+        color: white;
+        width: 30%;
+        height: 300px;
+        
+        margin: 50px;
+        margin-top: 100px;
+        margin-left: 120px;
+        padd
+        
+       }
+       .contact-box h1{
+        font-size: 44px;
+        margin-left: 15px;
+       }
+       .icon-contain ion-icon{
+        transition: transform .5s;
+       }
+       .icon-contain ion-icon:hover{
+             transform: scale(1.1);
+             color: #ff004f;
+       }
+       .contact-box #icon-one{
+            margin-left: 20px;
+            margin-top: 30px;
+            font-size: 12px;
+       }
+       #icon-one ion-icon{
+        font-size: 25px;
+        margin-right: 7px;
+        color: #ff004f;
+       }
+       #icon-two ion-icon{
+        font-size: 25px;
+        margin-right: 7px;
+        color: #ff004f;
+       }
+       .contact-box #icon-two{
+        margin-left: 20px;
+        margin-top: 20px;
+        font-size: 12px;
+       }
+       .icon-contain{
+        margin-top: 20px;
+        font-size: 28px;
+        margin-left: 20px;
+       }
+       #wwe{
+        padding: 14px 36px;
+        margin-top: 38px;
+        background: #ff004f;
+        color: white;
+        outline: none;
+        border: none;
+        font-weight: 600;
+        border-radius: 4px;
+        transition: transform .5s;
+       }
+       #wwe:hover{
+        transform: scale(1.1);
+    
+       }
+       .form-box{
+        width: 600px;
+        height: 330px;
+        
+        margin-top: 100px;
+        margin-right: 200px;
+    
+       }
+       .oga-sir{
+        display: flex;
+        justify-content: space-between;
+       }
+       .form-box input{
+        width: 100%;
+        height: 40px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        background-color:  rgb(24, 24, 24);
+       }
+       
+       input{
+        color: wheat;
+       }
+       textarea{
+        color: wheat;
+       }
+       .form-box textarea{
+        width: 100%;
+        height: 170px;
+        background-color:  rgb(24, 24, 24);
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        overflow: hidden;
+        
+       }
+       #umari{
+        padding: 10px 46px;
+        background-color: #ff004f;
+        border: none;
+        outline: none;
+        border-radius: 3px;
+        margin-top: 10px;
+        color: white;
+        font-weight: 600;
+
+       }
+       #timid{
+        width: 100%;
+        height: 50px;
+        background-color:  rgb(24, 24, 24);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        color: rgb(155, 153, 153);
+        font-size: 14px;
+       }
+       .navigation a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.navigation a:hover::after{
+    transform: scaleX(1)
+    
+}
+.icon-contain a{
+    color: white;
+}
+
+       </style>
+</head>
+<body>
+    <section class="btn"> 
+        <header class="wrapper">
+            <h1>Umar<ion-icon name="logo-wordpress"></ion-icon></ion-icon></h1>
+            
+            <nav class="link">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Menu</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+                <button id="botton">Login</button>
+            </nav>
+         
+        </header>
+        <div class="hole">
+            <p id="max">UI/UX Designer</p>
+            <h1>HI, I'M <span>Umar(Comrd)</span><br>From Nigeria</h1>
+        </div>
+        <img src="600.png">
+    </section>
+    <section class="about">
+           <div class="container"></div>
+         <div class="man">
+            <h1>About Me</h1><br>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis unde dolores, quia obcaecati am comihbnj hipkep
+            <br>laboriosam tempora rem omnis dolorem nam earum aliquid corrupti iusto magni  sapiente.gion man so fiuej jhe  
+            <br>Tenetur, temporibus soluta, nobis voluptatum ut nulla nostrum deleniti eos autem velithhfj gsr ftonghinj jhgopkj
+             <br> consequatur. Id quae obcaecati doloremque dolor natus repudiandae nisi numquam hihmhgru ie7uuhk jfhijk<br>tempore i
+             lotr bggyg ytgsssm umbry itue eoiikm wem bbl platyis hgoinjk </p>
+             <ul>
+                <li><a href="">Skills</a></li>&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
+                <li><a href="">Experiance</a></li>&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
+                <li><a href="">Education</a></li>
+             </ul>
+             <h1 id="boy">UI/UX</h1>
+             <p>Designing Web/App interfaces</p><br>
+             <h1 id="boy">Web Development</h1>
+             <p>Web App Development</p><br>
+             <h1 id="boy">App Development</h1>
+             <p>Building Android/IOS apps</p><br>
+             <h1 id="boy">Cyber Security</h1>
+             <p>Problem Solving</p>
+         </div>
+         <section class="service">
+            <h1 id="now">My Services</h1>
+           <div class="maintain">
+            <div class="boy">
+                <div class="divide">
+                <span class="icons"><ion-icon name="code-slash-outline"></ion-icon></span>
+                <h1>Web Design</h1>
+                <p> <p>Lorem ipsum dolor sit amet consect<br>etur adipisicing elit. At reprehenderit<br> accusamus dicta aperiam odio nisi,</p><br>
+                <p>Learn more</p>
+            </div>
+            </div>
+            <div class="girl">
+                <div class="divide">
+                <span class="icons"><ion-icon name="crop-outline"></ion-icon></span>
+                <h1>UI/UX Design</h1>
+                <p>Lorem ipsum dolor sit amet consect<br>etur adipisicing elit. At reprehenderit<br> accusamus dicta aperiam odio nisi,</p><br>
+                <p>Learn more</p>
+            </div>
+            </div>
+            <div class="girl">
+                <div class="divide">
+                <span class="icons"><ion-icon name="logo-apple-appstore"></ion-icon></span>
+                <h1>App Design</h1>
+                <p>Lorem ipsum dolor sit amet consect<br>etur adipisicing elit. At reprehenderit<br> accusamus dicta aperiam odio nisi,
+                </p><br>
+                <p>Learn more</p>
+            </div>
+            </div>
+           </div>
+         </section>
+         <section class="my-work">
+            <h1 id="nwo">My Work</h1>
+            <div class="yahoo">
+                <div class="firstly">
+                    <h2>Social Media App</h2><br>
+                    <p>the app connects you to talented people around the world and improve your digital skill.Download it from play store</p><br>
+                    <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+                </div>
+                <div class="second">
+                    <h2>Music App</h2><br>
+                    <p>the app connects you to talented people around the world.Download it from play store</p><br>
+                    <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+                </div>
+                <div class="third">
+                    <h2>Online Shopping App</h2><br>
+                    <p>the app connects you to talented people around the world.Download it from play store</p><br>
+                    <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+                </div>
+            </div>
+            <button id="btx">see more</button>
+            <div class="oga-sir">
+            <div class="contact-box">
+               <h1>Contact Me</h1>
+               <p id="icon-one"><ion-icon name="mail-outline"></ion-icon>&NonBreakingSpace;Contact@example.com</p>
+               <p id="icon-two"><ion-icon name="call-outline"></ion-icon>09078291176</p>
+               <div class="icon-contain">
+                <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href=""><ion-icon name="logo-whatsapp"></ion-icon></a>
+                <a href=""><ion-icon name="logo-facebook"></ion-icon></a><br>
+                <button id="wwe">Download cv</button>
+               </div>
+            </div>
+            <div class="form-box">
+                <form action="https://www.google.com" method="post">
+                    <input type="text" name="username" placeholder="Your Name" required><br><br>
+                    <input type="email" name="email" placeholder="Your Email" required><br><br>
+                    <textarea name="Message" placeholder="Your Message"></textarea><br>
+                    <button id="umari">Submit</button>
+                </form>
+               <a href=""></a>
+            </div>
+        </div>
+
+<footer id="timid">Copyright &copy; Umar.Mode with by Easy Tutorials</footer>
+         </section>
+        
+         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+*{
+    font-family: sans-serif;
+   
+}
+body{
+    background-color: rgb(63, 9, 9);
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+#robot{
+    width: 80px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    padding-right: 10px;
+}
+#robot a{
+    color: black;
+    font-weight: 600;
+}
+h1{
+    color: white;
+    padding-top: 70px;
+}
+.container{
+    width: 60%;
+    height: 400px;
+    background-color: black;
+    display: flex;
+    border-radius: 17px;
+    box-shadow: 0 0 10px 5px rgb(202, 3, 3);
+    transition: .6s;
+}
+.container:hover{
+    box-shadow: 0 0 5px 5px rgb(248, 248, 248);
+}
+/* .item-one{
+    width: 60%;
+    height: 100%;
+    background-color: aqua;
+} */
+.item-one{
+    width: 38%;
+    height: 100%;
+    background-color: black;
+    padding: 0 18px 0 30px;
+    border-radius: 17px 0 0 17px;
+}
+input{
+    width: 95%;
+    height: 45px;
+    border: none;
+    outline: none;
+    background: transparent;
+    /* background: transparent; */
+    border-bottom: 2px solid white;
+    color: white;
+   
+   margin-top: 10px;
+}
+#btn{
+    width: 90%;
+    height: 45px;
+    background: linear-gradient(rgb(214, 1, 1),black);
+    border: none;
+    outline: none;
+    border-radius: 22px;
+    color: white;
+    border: 2px solid rgb(214, 1, 1);
+    margin: 27px 0 0 14px;
+    font-size: 15px;
+}
+p{
+    color: white;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+
+input::placeholder{
+    color: white;
+}
+  .forget{
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        margin-left: 78px;
+       
+    }
+    a{
+        color: red;
+        margin-left: 5px;
+        text-decoration: none;
+        padding-bottom: 20px;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+  h2{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 100px;
+    padding-top: 30px;
+  }
+  .item-two{
+    border-radius: 195px 17px 17px 195px;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(214, 1, 1);
+    margin-left: 60px;
+    text-align: center;
+
+  }
